@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--untuk Constraint Layout
+     xmlns:android untuk mengakses dan menggunakan atribut yang disediakan oleh namespace android
+     xmlns:app untuk mengakses atribut khusus yang ditentukan dalam namespace app
+     xmlns:tools untuk mereferensikan elemen atau atribut yg didefinisikan dalam namespace tools
+     arah layoutnya vertikal
+     untuk lebar sesuai layar device
+     untuk tinggi sesuai berdasarkan objek didalamnya
+     app:layout_behavior` untuk memberikan standard scrolling behavior yang telah disediakan-->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <!-- Untuk elemen RecyclerView dalam XML
+        android:id untuk menggunakan elemen @+id,
+        @+id untuk mengidentifikasi elemen menjadi recyclerview
+        untuk lebar sesuai layar device
+        untuk tinggi sesuai berdasarkan objek didalamnya -->
+    
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+     </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- untuk Linear Layout
+     arah layoutnya vertikal
+     untuk lebar sesuai layar device
+     untuk tinggi sesuai berdasarkan objek didalamnya
+     menciptakan ruang di dalam batas tampilan layout dengan sebesar 6dp -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp">
+
+    <!-- Widget TextView
+        android:id untuk menggunakan elemen @+id,
+        @+id untuk mengidentifikasi elemen menjadi word
+        menggunakan attribute dalam style/word_title-->
+
+    <TextView
+        android:id="@+id/word"
+        style="@style/word_title" />
+</LinearLayout>

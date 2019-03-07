@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- CoordinatorLayout dipakai untuk membuat efek scrolling and "floating" di dalam sebuah layout
+     Pada umumnya ia akan menjadi root layout yang membungkus app bar dan konten
+     xmlns:android untuk mengakses dan menggunakan atribut yang disediakan oleh namespace android
+     xmlns:app untuk mengakses atribut khusus yang ditentukan dalam namespace app
+     xmlns:tools untuk mereferensikan elemen atau atribut yg didefinisikan dalam namespace tools
+     untuk lebar sesuai layar device
+     untuk tinggi sesuai berdasarkan objek didalamnya
+     app:layout_behavior` untuk memberikan standard scrolling behavior yang telah disediakan
+     context: menyatakan aktivitas yang dilakukan layout di .MainActivity-->
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Elemen pertama pada Coordinator Layout. AppBarLayout merupakan pembungkus bagi Toolbar
+    di dalam CoordinatorLayout agar efek scrolling bekerja.-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Dimasukkan dari layout content_main -->
+    <include layout="@layout/content_main" />
+
+    <!-- Mengimplementasi komponen widget Floating Action Button-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
